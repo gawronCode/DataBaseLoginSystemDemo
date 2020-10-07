@@ -114,7 +114,6 @@ namespace DataBaseLoginSystemDemo
                 if (reader.Read()) taken = true;
                 reader.Close();
             }
-            Console.WriteLine("DUPA XXXXXXXXXXXXXXXXXXDDDDDDDDDDDDDDDDDDDDDDDD");
             return taken;
 
         }
