@@ -32,6 +32,14 @@ namespace DataBaseLoginSystemDemo
         private void CreateAccount_Click(object sender, EventArgs e)
         {
 
+            if (!this.Password.Text.Equals(this.repeatPassword.Text.ToString()))
+            {
+                this.OperationInfo.Text = "Incorrect password";
+                this.OperationInfo.ForeColor = Color.Tomato;
+                this.OperationInfo.Visible = true;
+                return;
+            }
+
             if (_dataBaseClient.AddAccount(this.FirstName.Text, this.LastName.Text, this.Email.Text, this.Nick.Text,
                 this.Password.Text, out string message))
             {
